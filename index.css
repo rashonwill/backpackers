@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fredoka One";
+}
+
+body {
+  background: #d5c8b3;
+  background: whitesmoke;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  background: rgba(175, 150, 110, 0.5);
+  width: 80rem;
+  height: 45rem;
+  margin: 3rem auto;
+  border-radius: 20px;
+  display: flex;
+}
+
+.menu-options {
+  height: 100%;
+  width: 10%;
+  background: #000b38;
+  border-radius: 20px 0 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.fa-bars {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 20px;
+  cursor: pointer;
+  margin: 1rem;
+}
+.menu-options ul {
+  list-style-type: none;
+  margin: 2rem auto;
+}
+
+.menu-options ul li {
+  margin: 2rem -1rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 18px;
+  writing-mode: vertical-rl;
+  cursor: pointer;
+  transform: rotate(-180deg);
+}
+
+.menu-options ul li:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+.menu-viewer {
+  width: 100%;
+  height: 100%;
+  background: rgba(175, 150, 110, 1);
+  border-radius: 20px;
+  margin: 0 -1rem;
+  padding: 10px;
+}
+
+.nav {
+  width: 100%;
+  height: 70px;
+  display: flex;
+}
+
+.customer {
+  position: absolute;
+  right: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000b38;
+}
+
+.nav img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.nav h2 {
+  color: #000b38;
+  font-family: "Luckiest Guy";
+}
+
+.nav input {
+  width: 25rem;
+  height: 2rem;
+  margin: 0 2rem;
+  border: none;
+  outline: none;
+  padding-left: 8px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.4);
+  color: #000b38;
+}
+
+.nav.sub {
+  height: 40px;
+}
+
+.nav.sub ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav.sub ul li {
+  margin: 0 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  padding: 8px;
+}
+
+.selected {
+  border-bottom: 3px solid #000b38;
+}
+
+.nav.sub ul li:hover {
+  background: #000b38;
+  border-radius: 10px;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.items {
+  width: 50rem;
+  height: 35rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  overflow-y: scroll;
+  margin: 1rem 0;
+  margin-right: 3rem;
+}
+
+.items::-webkit-scrollbar {
+  width: 5px;
+}
+
+.items::-webkit-scrollbar-track {
+  background-color: #dddddd;
+}
+
+.items::-webkit-scrollbar-thumb {
+  background: darkgrey;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px #a9a9b0;
+}
+
+.items::-webkit-scrollbar-corner {
+  background: #03002e;
+}
+
+.card {
+  width: 14rem;
+  height: 22rem;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin: 1rem;
+}
+
+.card i {
+  color: darkorange;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 25px;
+  margin: 10px;
+  z-index: 9;
+  cursor: pointer;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  width: 100%;
+  height: 80%;
+  background: #000b38;
+  transform: skewY(345deg);
+  transition: 0.5s;
+}
+
+.card:hover::before {
+  transform: skewY(390deg);
+}
+
+.card img {
+  width: 100%;
+  height: 15rem;
+  border-radius: 20px;
+}
+
+.card:hover img {
+  transform: scale(1.08);
+}
+
+.card-content {
+  z-index: 10;
+}
+
+.card strong {
+  font-size: 14px;
+}
+
+.card h3 {
+  margin: 1rem auto;
+}
+
+.checkout {
+  width: 25%;
+  height: 36rem;
+}
+
+.checkout h3 {
+  margin: 1rem 0;
+}
+
+.cart {
+  width: 20rem;
+  height: 36rem;
+  background: white;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.incart {
+  height: 20rem;
+  width: 100%;
+}
+.order {
+  width: 100%;
+  height: 4rem;
+  margin: 0.5rem auto;
+  display: flex;
+}
+
+.order img {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.1);
+  margin-right: 5px;
+}
+.order-info {
+  width: 8rem;
+}
+
+.order-info h5 {
+  margin: 5px 0;
+}
+
+.qty {
+  display: flex;
+  margin-left: 2rem;
+  padding-top: 10px;
+}
+
+.qty input {
+  height: 1.5rem;
+  width: 2.5rem;
+  margin: -3px 5px;
+  border: none;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.qty i {
+  color: darkorange;
+  cursor: pointer;
+}
+
+.process {
+  width: 100%;
+  height: 13rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.cards {
+  width: 100%;
+  height: auto;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 0.5rem auto;
+  padding: 8px;
+}
+
+.cards strong {
+  position: absolute;
+  right: 10%;
+}
+
+.cards h6 {
+  margin-top: 1rem;
+}
+.process button {
+  width: 13rem;
+  height: 2.5rem;
+  background: black;
+  color: #dddddd;
+  border-radius: 10px;
+  margin: 0.5rem auto;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.total h5 {
+  font-size: 18px;
+}
